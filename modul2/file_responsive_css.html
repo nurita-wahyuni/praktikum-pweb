@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #2196F3; /* Warna default: biru untuk desktop */
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .responsive-text {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    /* Untuk layar kecil (≤600px) */
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: #e53935; /* Merah untuk layar kecil */
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr; /* Hanya 1 kolom */
+      }
+
+      .responsive-text {
+        font-size: 18px; /* Ukuran font lebih kecil */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+
+  <div class="responsive-text">
+    Ini adalah teks yang berubah ukuran sesuai layar.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+  background-color: lightblue; /* krem muda */
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+p {
+  color: rgb(164, 3, 164);
+}
