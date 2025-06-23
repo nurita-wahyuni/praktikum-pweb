@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>Image Slideshow</title></head>
+<body>
+  <h2>Galeri Gambar</h2>
+  <img id="slideshow-image" src="" alt="Slideshow" width="500">
+  <br>
+  <button onclick="gantiGambar(-1)">Previous</button>
+  <button onclick="gantiGambar(1)">Next</button>
+
+  <script>
+    var gambar = [
+        "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=500&h=300&q=80", // Gunung dan danau tenang
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&h=300&q=80", // Laut dan pantai saat matahari terbenam
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&h=300&q=80", // Pegunungan hijau dan langit biru
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&h=300&q=80", // Sunset pantai
+        "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=500&h=300&q=80", // Pantai dengan air jernih
+    ];
+    
+    var indexGambar = 0;
+    var imageElement = document.getElementById("slideshow-image");
+
+    function tampilkanGambar() {
+      imageElement.src = gambar[indexGambar];
+    }
+
+    function gantiGambar(arah) {
+      indexGambar += arah;
+      //jika sudah gambar terakhir, kembali ke awal
+      if (indexGambar >= gambar.length) {
+        indexGambar = 0;
+      }
+      //jika sudah gambar pertama dan menekan previous, pergi ke akhir
+      if (indexGambar < 0) {
+        indexGambar = gambar.length - 1;
+      }
+      tampilkanGambar();
+    }
+
+    // Tampilkan gambar pertama saat halaman dimuat
+    tampilkanGambar();
+  </script>
+</body>
+</html>

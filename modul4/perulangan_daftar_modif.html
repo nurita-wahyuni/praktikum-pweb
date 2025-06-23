@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Latihan Perulangan</title></head>
+<body>
+  <h2>Daftar Teman Sekelas</h2>
+  <ul id="daftar-teman">
+    <!-- Konten akan diisi oleh JavaScript -->
+  </ul>
+
+  <script>
+    // Ganti array matkul dengan nama-nama teman sekelas
+    var teman = ["Zulfa", "Raihana", "Miya", "Ayu", "Mira", "Maharani"];
+    var daftarElement = document.getElementById("daftar-teman");
+    for (let i = 0; i < teman.length; i++) {
+      daftarElement.innerHTML += "<li>" + teman[i] + "</li>";
+    }
+  </script>
+</body>
+</html>
